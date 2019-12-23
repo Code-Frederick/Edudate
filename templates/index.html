@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+  {% include 'includes/_categories.html' %}
+  <br />
+    <div class="container" id="tutors">
+      <h2>Tutors</h2>
+      <br />
+      <div class="card-columns">
+        {% for tutor in tutors %}
+        <a href="/tutors/{{tutor.id}}">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img class="pfp" src="{{tutor.image}}" />
+                </div>
+                <div class="col-9">
+                  <h4 class="name">{{tutor.name}}</h4>
+                  <h6>{{tutor.grade}} at {{tutor.school}}</h6>
+                  <p><b>Subjects Taught: </b> {{tutor.subject}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}

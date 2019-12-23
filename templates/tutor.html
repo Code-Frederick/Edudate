@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block title %}View {{tutor.name}}{% endblock %}
+{% block body %}
+    <div class="container">
+        <h2>View Tutor</h2>
+        <br />
+        <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img class="pfp-page" src="{{tutor.image}}" />
+                </div>
+                <div class="col-9">
+                  <h2 class="name">{{tutor.name}}   <a class="link" href="mailto:{{tutor.email}}"><button type="button" class="btn btn-primary"><i class="fas fa-envelope-open-text"></i></button></a></h2>
+                  <br />
+                  <h4>{{tutor.grade}} at {{tutor.school}}</h4>
+                  <br />
+                  <h4><b>Subjects Taught: </b> {{tutor.subject}}</h4>
+                  <br />
+                  <h4><b>Bio: </b> {{tutor.bio}}</h4>
+                </div>
+              </div>
+        </div>
+    </div>
+    <br />
+    {% include 'includes/_categories.html' %}
+{% endblock %}

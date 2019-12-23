@@ -1,0 +1,10 @@
+class Tutor:
+    id: str
+    name: str
+    grade: str
+    personality: str
+    image: str
+    school: str
+    bio: str
+    email: str
+    subject: str
